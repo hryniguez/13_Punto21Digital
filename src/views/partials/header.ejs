@@ -1,0 +1,118 @@
+<header class="header__container">
+
+    <!-- GRAY HEADER -->
+    <nav class="header__nav--userdesign">
+        <ul class="nav__container--gray">
+            <li class="nav__btn--gray">
+                <a href="/nosotros" class="nav__icon--link"><i class="fa-regular fa-building nav__icon--gray"></i>Nosotros</a>
+            </li>
+            <li class="nav__btn--gray">
+                <a href="" class="nav__icon--link"><i class="fa-brands fa-whatsapp nav__icon--gray"></i>Comunicate por
+                    WhatsApp</a>
+            </li>
+            <li class="nav__btn--gray">
+                <a href="" class="nav__icon--link"><i class="fa-solid fa-headset nav__icon--gray"></i>Consultas</a>
+            </li>
+            <li>
+                <a href="/servicios" class="nav__icon--link"><i class="fa-solid fa-circle-down nav__icon--gray"></i>Servicio de Guarda y Destrucción de documentos</a>
+            </li>
+            <li class="nav__logo__gray--container">
+                <img class="nav__logo--gray" src="/images/Punto21__logo--secundario.svg" alt="">
+            </li>
+        </ul>
+    </nav>
+
+    <!-- HEADER MENU HAMBUGER, LOGO, SEARCH-BAR, MY-ACCOUNT, CART -->
+    <div class="header__bsi_container">
+
+        <!-- MENU HAMBUGER - LOGO -->
+        <div class="header__burger__logo--container">
+
+            <!-- MENU HAMBURGER -->
+            <div class="header__burger--menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- LIST MENU CATEGORIES -->
+            
+            <nav class="menu-container">
+                <ul class="menu">
+                    <li><a href="/products">Digitalización ADF (alimentador automático) - Hojas sueltas</a></li>
+                    <li><a href="/products">Digitalización Contactless Libros</a></li>
+                </ul>
+            
+            </nav>
+            <!-- LOGO -->
+            <div class="header__logo--container">
+                <a href="/">
+                    <img src="/images/logo.png" class="header__logo" alt="Header Logo">
+                    <h6 style="color: white; text-align: center; padding: 3px; border: solid 3px color white ;">INICIO</h6>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- SEARCH-BAR -->
+        <div class="header__search--container">
+            <form class="header__search--form" action="/search" method="GET">
+                <input class="header__search--bar" type="text" placeholder="Buscar productos"
+                    name="keywords">
+                <button class="search__bar--btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- MY-ACCOUNT - CART -->
+        <div class="header__acc__cart--container">
+
+
+                <% if (usuarioLogeado && usuarioLogeado.category == "ADMIN") {%>
+                    <ul class="menu">
+                        <a href="/products/dashboard" class="header__name--link"> Productos </a>
+                    </ul>
+                    <ul class="menu">
+                        <a href="/users/dashboard" class="header__name--link"> Usuario  </a>
+                    </ul>
+                    
+                <%}%>
+                
+                    <% if (usuarioLogeado != undefined) {%>
+                        <img class="avatar_header" src="/images/users/<%= usuarioLogeado.image %>" alt="imagen_avatar_usuario">
+                        <a href="/users/profile/<%= usuarioLogeado.id %>"><p class="header__name--link"><%= usuarioLogeado.name %></p> </a>
+                        <!-- <a href=""><p>  | </p></a> -->
+                        <a href="/users/logout"><p class="header__name--link"> <i class="fa-solid fa-arrow-right-from-bracket" style="width: 6rem; height: 5vh; padding-left: 2em;"></i> </p></a>
+                    <%} else{%>
+                    <a href="/users/register">
+                        <p class="header__name--link"> <i class="fa-solid fa-circle-user"></i> </p>
+                    </a>
+                        <a href="/users/login">
+                        <p class="header__name--link"> Iniciar Sesion</p>
+                    </a>
+                        <%}%> 
+
+                <!-- CARRT -->
+            <div class="header__cart--container">
+                <a href="/products/cart" class="acc__links">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+              </div>
+            
+        </div>
+
+    </div>
+
+    <!-- HEADER NAV CATEGORIES -->
+    <nav class="header__nav--categories" style="background-color: var(--color-celeste);">
+        <ul class="header__container--sections header__name--sections">
+            <li><a class="header__name--link_menu" href="/products">PRODUCTOS</a></li>
+            <li><a class="header__name--link_menu" href="/servicios">SERVICIOS</a></li>
+            <li><a class="header__name--link_menu" href="/nosotros">NOSOTROS</a></li>
+            <li><a class="header__name--link_menu" href="/clientes">CLIENTES</a></li>
+                <li><a class="header__name--link_menu" href="/products">DIGITALIZACIÓN ADF (alimentador automático) - Hojas sueltas</a></li>
+                <li><a class="header__name--link_menu" href="/products">DIGITALIZACIÓN CONTACTLESS (sin contacto) - Libros </a></li>
+        </ul>
+    </nav>
+
+    <script src="/js/header.js" defer></script>
+</header>

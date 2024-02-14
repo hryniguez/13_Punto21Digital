@@ -1,0 +1,141 @@
+.main_login{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--fondo);
+    padding: 10% 0;
+}
+.articulo_login_main{
+    padding: 18px;
+
+}
+.articulo_login_main h2{
+    text-align: left;
+    margin-bottom: 2px;
+    font-size: 15px;
+
+}
+    
+    .articulo_login_main h2{
+        font-size: 16px;
+        font-weight: bold;
+    }
+.box_home_form{
+    padding: 0;
+}
+.input_login{
+
+    width: 99%;
+    height: 45px;
+    border: 2px solid var(--color-negro);
+    border-radius: 10px;
+
+
+}
+.btn_login_main{
+    width: 60%;
+    height: 30px;
+    background-color: var(--color-negro);
+    color: white;
+    border: 1px solid var(--color-negro);
+    border-radius: 30px;
+    
+    
+}
+.login_contra_up{
+   
+    color: var(--color-negro);
+    text-align: left;
+}
+.login_contra_up h6{
+    font-size: 12px;
+}
+.btn_login_up{
+    color: var(--color-negro);
+    text-align: center;
+}
+.btn_login_up h6{
+    font-size: 12px;
+}
+.articulo_login_error_validator ul{
+    padding: 0;
+    color: red;
+    font-weight: 600;
+}
+@media(min-width: 768px){
+    .input_login{
+        width: 85%;
+        height: 45px;
+    }
+    .articulo_login_main{
+        padding: 13px;
+    }
+    
+    .login_h_all{
+        margin-left:60px;
+    }
+    .btn_login_main{
+        width:250px;
+        height:50px ;
+    }
+    .btn_login_up{
+        margin-bottom: 2px;
+
+    }
+    .btn_login_up h6{
+        font-size: 12px;
+        margin-bottom: 10px
+    }
+
+}
+
+@media  (min-width: 1024px){
+    .main_login{
+        padding: 5% 0;
+    }
+    .input_login{
+        height: 60px;
+        font-size: 22px;
+
+    }
+    .articulo_login_main h2{
+        font-size: 19px;
+        font-weight: bold;
+
+    }
+    .main_login{
+        margin-bottom : 200px;
+    }
+    .btn_login_main{
+        width: 20%;
+        height: 50px;
+        background-color: var(--color-negro);
+        color: var(--color-blanco);
+        border: 1px solid var(--color-negro);
+        border-radius: 30px;
+        
+        
+    }
+    .btn_login_main{
+        width:290px;
+        height:70px;
+        font-size: 20px;
+
+    }
+    .login_h_all{
+        margin-left:75px;
+    }
+    .login_contra_up h6{
+        font-size: 14px;
+
+    }
+    .btn_login_up h6{
+        font-size: 14px;
+    }
+    }
+    @media  (min-width: 1440px){
+        .login_h_all{
+            margin-left:115px;
+        }
+
+    }

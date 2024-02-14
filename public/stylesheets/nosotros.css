@@ -1,0 +1,324 @@
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+/* Sections Common
+--------------------------------*/
+/*GENERALES*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+.contenedor{
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.titulo-seccion{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.titulo-seccion h2{
+  color: #0089E0;
+  font-size: 2.125rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.titulo-seccion p{
+  color: #979797;
+  font-size: 1rem;
+  font-weight: 400;
+ 
+}
+.main .proyectos{
+  background: white;
+  padding: 20px 0 54px 0;
+}
+
+.main .proyectos .galeria-proyectos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 34px;
+  border-bottom: 1px solid #ccc;
+}
+
+.main .proyectos .galeria-proyectos .proyecto{
+  width: 32%;
+  margin-bottom: 2%;
+  /* cursor: pointer; */
+}
+
+.main .proyectos .galeria-proyectos .proyecto img{
+  width: 100%;
+  vertical-align: top;
+  border-radius:10px;
+  /* box-shadow: 0px 0px 10px var(--color-negro); */
+
+}
+/*Proyectos*/
+
+
+/*Modal fotos proyectos*/
+.modal{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 9999999999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img{
+  width: 90%;
+  max-width: 600px;
+}
+
+.modal .btn-cerrar{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  right: 20px;
+  background: #0089E0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.modal .btn-cerrar i{
+  color: #fff;
+  font-size: 1rem;
+  line-height: 50px;
+} */
+
+
+/*Nuestro equipo*/
+
+.main .nuestro-equipo{
+  background: #F3F4FA;
+  padding-top: 54px;
+  padding-bottom: 108px;
+}
+
+.main .nuestro-equipo .equipo{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main .nuestro-equipo .equipo .persona-equipo{
+  background: #fff;
+  padding: 50px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0px 9px 32px -1px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.main .nuestro-equipo .equipo .persona-equipo:first-child, .main .nuestro-equipo .equipo .persona-equipo:last-child{
+  position: relative;
+  top: 20px;
+}
+
+.main .nuestro-equipo .equipo .persona-equipo .foto{
+  width: 50%;
+  max-width: 100px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.main .nuestro-equipo .equipo .persona-equipo .foto img{
+  width: 100%;
+  border-radius: 100%;
+ /* border: solid px #0089E0; */
+}
+
+.main .nuestro-equipo .equipo .persona-equipo .texto h3{
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #0089E0;
+}
+
+.main .nuestro-equipo .equipo .persona-equipo .texto h4{
+  color: #979797;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.main .nuestro-equipo .equipo .persona-equipo .texto p{
+  color: #979797;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+
+/* ----- MEDIA QUERIES ----- */
+
+@media screen and (max-width:1040px){
+  /*Nuestro equipo*/
+  .main .nuestro-equipo .titulo-seccion{
+    margin-bottom: 60px;
+  }
+  .main .nuestro-equipo .equipo .persona-equipo{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+  }
+  .main .nuestro-equipo .equipo .persona-equipo:first-child{
+    top: -20px;
+  }
+  .main .nuestro-equipo .equipo .persona-equipo .foto{
+    margin-right: 20px;
+  }
+
+}
+
+@media screen and (max-width: 900px){
+
+  /*Main*/
+  .main{
+    margin-top: 0;
+  }
+
+}
+
+@media screen and (max-width:550px){
+  /*Proyectos*/
+  .main .proyectos .galeria-proyectos .proyecto{
+    width: 49%;
+  }
+  /*Nuestro equipo*/
+  .main .nuestro-equipo .equipo .persona-equipo{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+}
+
+
+
+
+
+section {
+    overflow: hidden;
+  }
+  
+  .section-title {
+    font-size: 32px;
+    color: #111;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .section-description {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .section-title-divider {
+    width: 50px;
+    height: 3px;
+    background: #03C4EB;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Get Started Section
+  --------------------------------*/
+  #about {
+    background: #fff;
+    padding: 80px 0;
+  }
+  
+  #about .about-img {
+    overflow: hidden;
+  }
+  
+  #about .about-img img {
+    max-width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    #about .about-img {
+      height: auto;
+    }
+    #about .about-img img {
+      margin-left: 0;
+      padding-bottom: 30px;
+    }
+  }
+  
+  #about .about-content {
+    background: #fff;
+  }
+  
+  #about .about-title {
+    color: #333;
+    font-weight: 700;
+    font-size: 28px;
+  }
+  
+  #about .about-text {
+    line-height: 26px;
+    margin-bottom: 15px;
+  }
+  
+  #about .about-text:last-child {
+    margin-bottom: 0;
+  }
+/*Modal fotos proyectos*/
+.modal{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 9999999999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img{
+  width: 90%;
+  max-width: 600px;
+}
+
+.modal .btn-cerrar{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  right: 20px;
+  background: #0089E0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.modal .btn-cerrar i{
+  color: #fff;
+  font-size: 1rem;
+  line-height: 50px;
+}
+  

@@ -1,0 +1,48 @@
+<%-include("../partials/head.ejs")%>
+
+    <body>
+
+        <%-include("../partials/header.ejs")%>
+
+            <main>
+                <div class="box_create">
+
+                    <a class="button_create" href="/users/createPrivileges">CREAR USUARIO</a>
+
+                </div>
+
+                <section class="contenedor-productos1 section_products_main_index">
+
+                    <% users.forEach(element=> { %>
+
+                        <article class="articulos">
+                            <img src="/images/users/<%= element.image %>" alt="perfil" />
+                            <div class="">
+                                <div class="main_descuento_precio_articulo">
+                                    <p class="precio"><%= element.name %>
+                                    </p>
+                                </div>
+                                <p class="modelo">
+                                    <%= element.email %>
+                                </p>
+                            </div>
+
+
+                            <div class="box_dashboard_option">
+                                <a class="icon_edit_dashboard" href="/users/update/<%= element.id %>"><i
+                                        class="fa-regular fa-pen-to-square"></i>
+                                </a>
+                                <form action="/users/delete/<%= element.id %>?_method=DELETE" method="POST"
+                                    style="display: inline-flex">
+                                    <button type="submit" class="button-delete"><i
+                                            class="fa-regular fa-trash-can"></i></button>
+                                </form>
+                            </div>
+                        </article>
+                        <% }) %>
+
+            </main>
+            <%- include("../partials/footer.ejs") %>
+    </body>
+
+    </html>

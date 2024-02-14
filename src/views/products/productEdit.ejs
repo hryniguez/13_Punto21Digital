@@ -1,0 +1,85 @@
+<!--ACA SE INCLUYE EL PARTIAL : HEAD -->
+<%- include("../partials/head.ejs") %>
+
+  <body class="update_body">
+
+    <!--ACA SE INCLUYE EL PARTIAL : HEADER -->
+    <%- include("../partials/header.ejs") %>
+
+
+      <main>
+        <div class="main_title_box">
+          <hr class="hr_txt" />
+        <h2 class="h2_title_form">EDITAR PRODUCTO</h2>
+          <hr class="hr_txt" />
+      </div>
+        <form action="/products/update/<%= product.id %>?_method=PUT" method="post" class="form_loadProduct">
+
+          <section class="form__createProduct">
+            <div class="img_update_fast">
+              <img src="/images/products/<%= product.imagen%>" alt="imagen principal" class="imagen_grande input_edit_img">
+              <input class="dashboard__image" name="image" type="file" accept="image/*" value="<%= product.imagen %>">
+            </div>
+
+            <div class="update_box_intern">
+              <label for="nombre">Nombre :</label>
+              <input type="text" name="nombre" id="nombre" value="<%= product.nombre %>" />
+
+              <label for="precio">Precio por carilla :</label>
+              <input type="number" name="precio" value="<%= product.precio %>" />
+
+              <label for="category" >Categoría :</label>
+              <select name="category" id="category" value="<%= product.category %>">
+                <option value="Digitalizacion_libros"  <%=product.category == "Digitalizacion_libros" ? "selected" : null  %>>Digitalizacion_libros</option>
+                <option value="Digitalizacion_ADF" <%=product.category == "Digitalizacion_ADF" ? "selected" : null  %>>Digitalizacion_ADF</option>
+              </select>
+              <div>
+                <label for="descripcion">Descripción</label>
+                <textarea name="descripcion" id="descripcion"><%=product.descripcion %></textarea>
+              </div>
+            </div>
+            <div class="desde_hasta_update">
+             
+              <label> Desde_hasta: </label>
+             
+              <div>
+                <input type="checkbox" name="desde_hasta" value="1" <%=product.desde_hasta.includes("1") ? "checked" : null %> id="desde_hasta">
+                <label for="desde_hasta" >1 - 500</label>
+              </div>
+              <div>
+                <input type="checkbox" name="desde_hasta" value="2" <%=product.desde_hasta.includes("2") ? "checked" : null %> id="desde_hasta">
+                <label for="desde_hasta" >501 - 2000</label>
+              </div>
+              <div>
+                <input type="checkbox" name="desde_hasta" value="3" <%=product.desde_hasta.includes("3") ? "checked" : null %> id="desde_hasta">
+                <label for="desde_hasta" >2001 - 5000</label>
+              </div>
+              <div>
+                <input type="checkbox" name="desde_hasta" value="4" <%=product.desde_hasta.includes("4") ? "checked" : null %> id="desde_hasta" >
+                <label for="desde_hasta" >5001 - 15000</label>
+              </div>
+              <div>
+                <input type="checkbox" name="desde_hasta" value="5" <%=product.desde_hasta.includes("5") ? "checked" : null %> id="desde_hasta">
+                <label for="desde_hasta" >15001 - 30000</label>
+              </div>
+              <div>
+                <input type="checkbox" name="desde_hasta" value="6" <%=product.desde_hasta.includes("6") ? "checked" : null %> id="desde_hasta">
+                <label for="desde_hasta" >30000 en adelante</label>
+              </div>            
+              
+              
+              </div>
+
+              
+            
+          
+          </section>
+        <button class="main_ver-todos-productos" type="submit">GUARDAR MODIFICACIONES</button>      
+        </form>
+      
+      </main>
+
+      <!--ACA SE INCLUYE EL PARTIAL : -->
+      <%- include("../partials/footer.ejs") %>
+  </body>
+  </html>

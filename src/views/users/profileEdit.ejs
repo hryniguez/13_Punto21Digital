@@ -1,0 +1,69 @@
+<!--ACA SE INCLUYE EL PARTIAL : HEAD -->
+<%- include("../partials/head.ejs") %>
+
+<body class="body_home">
+  
+  <!--ACA SE INCLUYE EL PARTIAL : HEADER -->
+  <%- include("../partials/header.ejs") %>
+  
+  <main class="main__form main__formProfile">
+    
+    <div class="main__form__register__box">
+      
+      <div class="main__title__box">
+        <hr class="main__form__lines">
+        <h2 class="main__form__title">PERFIL</h2>
+        <hr class="main__form__lines">
+      </div>
+
+      <div class="container_avatar_img">
+          <img class="img_avatar" src="/images/users/<%= usuarioLogeado.image %>" alt="imagen principal"  >
+      </div>
+
+      <form action="/users/profile/<%= usuarioLogeado.id %>?_method=PUT" method="post" class="main__form__register" enctype="multipart/form-data" >
+        <label for="name">NOMBRE</label>
+        <input type="text" name="name"  id="name" value="<%= usuarioLogeado.name %>"/>
+        <p class="errores_validacion_profile"> <%= locals.errores && errores.name ? errores.name.msg : null %> </p>
+
+        <!-- <label for="email">EMAIL</label>
+        <input type="email" name="email"  value="<%= usuarioLogeado.email %>"/>
+        <p class="errores_validacion_profile"> <%= locals.errores && errores.email ? errores.email.msg : null %> </p> -->
+
+        <!-- <label for="password">CONTRASEÑA</label>
+        <div class="main__form__register__password">
+        <input type="password" name="password" class="main__form__register__password" value="<%= usuarioLogeado.password %>"/>
+        <p class="errores_validacion_profile"> <%= locals.errores && errores.password ? errores.password.msg : null %> </p>
+        <i class="fa-regular fa-eye"></i>
+        </div> -->
+
+        <label for="date">FECHA DE NACIMIENTO: </label>
+        <input type="date" name="date"  value="<%= usuarioLogeado.date %>"/>
+        <p class="errores_validacion_profile"> <%= locals.errores && errores.date ? errores.date.msg : null %> </p>
+
+        <label for="localidad">LOCALIDAD: </label>
+        <input type="TEXT" name="localidad"  value="<%= usuarioLogeado.localidad %>"/>
+        <p class="errores_validacion_profile"> <%= locals.errores && errores.localidad ? errores.localidad.msg : null %> </p>
+
+        <label for="sobremi">INFORMACIÓN PERSONAL: </label>
+        <textarea name="sobremi" id="sobremi" cols="30" rows="10" ><%= usuarioLogeado.sobremi %></textarea>
+        <p class="errores_validacion_profile"> <%= locals.errores && errores.sobremi ? errores.sobremi.msg : null %> </p>
+
+        <label for="image">CAMBIO DE AVATAR: </label>
+        <input type="file" name="image" id="image" accept="image/*" value="<%= usuarioLogeado.image %>">
+        <p class="errores_validacion_profile"> <%= locals.errores && errores.image ? errores.image.msg : null %> </p>
+        
+        
+      
+        <button class="main__form__button" type="">EDITAR</button>
+
+        </div>
+      </form>
+    </main>
+
+<!--ACA SE INCLUYE EL PARTIAL : -->
+<%- include("../partials/footer.ejs") %>
+
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!--ACA SE INCLUYE EL PARTIAL : HEAD -->
+<%-include("../partials/head.ejs")%>
+
+  <body class="update_body">
+
+    <!--ACA SE INCLUYE EL PARTIAL : HEADER -->
+    <%-include("../partials/header.ejs")%>
+
+
+      <main class="main__form main__formProfile">
+        <div class="main_title_box">
+        <hr class="hr_txt" />
+        <h2 class="h2_title_form">CREAR NUEVO PRODUCTO</h2>
+        <hr class="hr_txt" />
+        </div>
+          <form action="/products" method="post" class="form_loadProduct main__form__register" enctype="multipart/form-data">
+          <section class="form__createProduct">
+
+            <div class="img_create_fast">
+              
+              <input class="dashboard__image" name="image" type="file" accept="image/*" >
+             
+            </div>
+
+            <div class="update_box_intern">
+              <label for="nombre">Nombre :</label>
+              <input type="text" name="nombre" id="nombre" />
+
+              <label for="precio">Precio por carilla :</label>
+              <input type="number" name="precio" />
+
+              <label for="category" >Categoría :</label>
+              <select name="category" id="category" >
+                <!--<option value="Alquieler_Guarda">Alquieler / Guarda</option> -->
+                <option value="Digitalizacion_ADF">Digitalizacion ADF</option>
+                <option value="Digitalizacion_libros">Digitalizacion libros</option>
+              </select>
+              <div>
+                <label for="descripcion">Descripción :</label>
+                <textarea name="descripcion" id="descripcion"></textarea>
+              </div>
+              </div>
+              <div class="desde_hasta_update">
+                <label>desde hasta :</label>
+                <div>
+                  <input type="checkbox" name="desde_hasta" value="1" id="desde_hasta">
+                  <label for="desde_hasta" >1 - 500</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="desde_hasta" value="2" id="desde_hasta">
+                  <label for="desde_hasta" >501 - 2000</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="desde_hasta" value="3" id="desde_hasta">
+                  <label for="desde_hasta" >2001 - 5000</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="desde_hasta" value="4" id="desde_hasta">
+                  <label for="desde_hasta" >5001 - 15000</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="desde_hasta" value="5" id="desde_hasta">
+                  <label for="desde_hasta" >15001 a 30000</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="desde_hasta" value="6" id="desde_hasta">
+                  <label for="desde_hasta" >30000 en adelante</label>
+                </div>
+                
+
+              </div>
+           
+           
+
+            </div>
+          
+          </section>
+          <button class="main__form__button" type="submit">CREAR PRODUCTO</button>
+
+        </form>
+
+      </main>
+
+      <!--ACA SE INCLUYE EL PARTIAL : -->
+      <%- include("../partials/footer.ejs") %>
+  </body>
+
+  </html>

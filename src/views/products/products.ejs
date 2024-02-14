@@ -1,0 +1,101 @@
+<!--ACA SE INCLUYE EL PARTIAL : HEAD -->
+<%- include("../partials/head.ejs") %>
+
+<body class="body_home">
+
+<!--ACA SE INCLUYE EL PARTIAL : HEADER -->
+<%- include("../partials/header.ejs") %>
+
+
+
+<!-- <div style="text-align: center;">
+  <video width="90%"  autoplay>
+      <source src="/images/video/punto21digital.mp4" type="video/mp4">
+      Tu navegador no soporta el elemento de video.
+    </video>
+  </div> -->
+
+    <main class="productos">
+      <!-- <section class="carrusel_home">
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active d-item">
+              <img
+                src="/images/digi1.jpg"
+                class="d-block w-100 d-img"
+                alt="digitalizacion"
+              />
+            </div>
+            <div class="carousel-item d-item">
+              <img
+                src="/images/digi2.jpg"
+                class="d-block w-100 d-img"
+                alt="digitalizacion"
+              />
+            </div>
+            <div class="carousel-item d-item">
+              <img
+                src="/images/digi3.jpg"
+                class="d-block w-100 d-img"
+                alt="digitalizacion"
+              />
+            </div>
+            <div class="carousel-item d-item">
+              <img
+                src="/images/digi4.jpg"
+                class="d-block w-100 d-img"
+                alt="digitalizacion"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section> -->
+
+      <div class="main_title_box">
+        <hr class="hr_txt" />
+        <h2 id="productos_home">PRODUCTOS</h2>
+        <hr class="hr_txt" />
+      </div>
+
+      <section class="contenedor-productos1 section_products_main_index">
+        <% products.forEach(product => { %>
+                  <article class="articulos">
+          <a href="../products/detalle/<%= product.id%>"><img src="/images/products/<%=product.imagen %>" alt="digitalizacion" /></a>
+          <div class="product-texto">
+            <div class="main_descuento_precio_articulo">
+              <p class="precio">$<%=product.precio%></p>
+            </div>
+            <p class="modelo"><%=product.nombre%></p>
+            <button><a class="button__blanco--color" href="/products/carrito/<%= product.id%>">COMPRAR</a></button>
+          </div>
+        </article>
+          <% }); %>
+      </section>
+
+
+    </main>
+
+<!--ACA SE INCLUYE EL PARTIAL : -->
+<%- include("../partials/footer.ejs") %>
+
+</body>
+
+</html>

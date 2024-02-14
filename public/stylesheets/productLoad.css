@@ -1,0 +1,213 @@
+/* .main__container--box{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    background-color: var(--color-blanco);
+    border: 2px solid black;
+    border-radius: 35px;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    gap: 20px;
+} */
+
+.update_body{
+    background-color: white;
+}
+
+.h2_title_form{
+    text-align: center;
+    font-weight:lighter;
+    padding: 30px;
+
+}
+.input_edit_img {
+    position: absolute;
+    height:150px;
+    width: 150px;
+
+}
+
+.img_update_fast input{
+    position:relative;
+    height:150px;
+    width: 150px;
+    opacity: 0;
+}
+.img_create_fast {
+    text-align: center;
+}
+.img_create_fast input {
+    outline: solid rgb(22, 153, 240) 2px;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--color-blanco);
+    margin-top:25px;
+    width: 55%;
+    height: 150px;
+}
+
+.form_loadProduct {
+    display:flex;
+    flex-direction: column;
+    margin:auto;
+}
+.form_loadProduct label {
+    font-weight: bold;
+}
+
+.form__createProduct {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.update_box_intern  label{
+    width:100%;
+    text-align: center;
+}
+.update_box_intern  input{
+    width:100%;
+}
+.update_box_intern  select{
+    width:100%;
+    text-align: center;
+}
+.update_box_intern textarea {
+    width: 100%;
+}
+.input_colores_create {
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    .input_edit_img {
+    position: absolute;
+    height:300px;
+    width: 300px;
+
+    }
+
+     .img_update_fast input{
+    position:relative;
+    height:300px;
+    width: 300px;
+    opacity: 0;
+    }
+}
+
+
+@media (min-width:1024px) {
+    main .form_loadProduct {
+        max-width: 830px;
+    }
+.h2_title_form{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.img_create_fast input{
+    background-image: url("../images/upload-icon-22.png");
+    background-size: 25%;
+    width:350px;
+    background-color: var(--color-blanco);
+    margin-top:25px;
+   }
+
+.input_edit_img {
+    position: absolute;
+    height:350px;
+width: 350px;
+}
+
+ .img_update_fast input{
+position:relative;
+height:350px;
+width: 350px;
+opacity: 0;
+}
+
+.form_loadProduct {
+    display:flex;
+    flex-direction: column;
+    width:90%;
+    margin:auto;
+}
+
+.form__createProduct {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.update_box_intern {
+    width:40%;
+    padding-left: 0px;
+}
+.update_box_intern select {
+    border-radius: 10px;
+    border:solid 1px #75798b;
+    width: 100%;
+    text-align: center;
+}
+.update_box_intern textarea {
+    border-radius: 10px;
+    border:solid 1px #75798b;
+    width: 100%;
+    padding: 0% 2%;
+}
+
+.form_loadProduct input {
+    padding:15px;
+    border-radius: 10px;
+    border:solid 1px #75798b;
+}
+
+.form_loadProduct label {
+    display:block;
+    font-weight: bold;
+    margin: 10px 0px 5px;
+}
+
+.desde_hasta_update {
+    /* display: flex;
+    justify-content: space-around; */
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    background-color: var(--color-blanco);
+    border: 2px solid black;
+    border-radius: 35px;
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
+.desde_hasta_update label {
+    margin:25px;
+}
+
+.input_colores_create {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.label_colores {
+    width: 20%
+}
+
+.input_colores_create label {
+    margin: 0;
+}
+
+
+
+.main_ver-todos-productos{
+    margin-top: 30px;
+}
+}

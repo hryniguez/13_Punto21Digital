@@ -1,0 +1,45 @@
+<%-include("../partials/head.ejs")%>
+
+<body>
+
+  <%-include("../partials/header.ejs")%>
+
+<main>
+    <div class="box_create">
+
+      <a class="button_create" href="/products/create">CREAR PRODUCTO</a>
+    
+    </div>
+
+  <section class="contenedor-productos1 section_products_main_index">
+        
+        <% products.forEach(element => { %>
+            
+            <article class="articulos">
+              <img src="/images/products/<%= element.imagen %>" alt="digitalizacion" />
+                <div class="">
+                  <div class="main_descuento_precio_articulo">
+                    <p class="precio">$<%= element.precio %></p>
+                  </div>
+                  <p class="modelo"><%= element.nombre %></p>
+                </div>
+                
+                
+                <div class="box_dashboard_option">
+                  <a class="icon_edit_dashboard" href="/products/detalle/<%= element.id %>"
+                  ><i class="fa-solid fa-list-check"></i>
+                  </a>
+                  <a class="icon_edit_dashboard" href="/products/update/<%= element.id %>"
+                  ><i class="fa-regular fa-pen-to-square"></i>
+                  </a>
+                  <form action="/products/delete/<%= element.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                    <button type="submit" class="button-delete"><i class="fa-regular fa-trash-can"></i></button>
+                  </form>
+                </div>
+            </article>
+        <% }) %>
+
+</main>
+<%- include("../partials/footer.ejs") %>
+</body>
+</html>

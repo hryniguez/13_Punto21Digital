@@ -1,0 +1,65 @@
+<!--ACA SE INCLUYE EL PARTIAL : HEAD -->
+<%- include("../partials/head.ejs") %>
+
+  <body class="body_home">
+
+    <!--ACA SE INCLUYE EL PARTIAL : HEADER -->
+    <%- include("../partials/header.ejs") %>
+
+      <main class="main_login main__form">
+        <form class="box_home_form" action="/users/login" method="post">
+          <section>
+
+            <div class="main__title__box">
+              <hr class="main__form__lines">
+              <h2 class="main__form__title">INICIA SESIÓN</h2>
+              <hr class="main__form__lines">
+            </div>
+
+            <article class="articulo_login_main">
+              <% if (typeof errors !='undefined' ){ %>
+                <div class="articulo_login_error_validator">
+                  <p>ERROR</p>
+                  <ul>
+                    <% for (let i=0; i < errors.length; i++) { %>
+                      <li>
+                        <%= errors[i].msg %>
+                      </li>
+                      <% } %>
+                  </ul>
+                </div>
+                <% } %>
+                  <h2 class="login_h_all">EMAIL</h2>
+                  <label for="usuario"></label>
+                  <input class="input_login" type="email" name="usuario" placeholder="Ingresa tu email" required>
+            </article>
+            <article class="articulo_login_main">
+              <h2 class="login_h_all">CONTRASEÑA</h2>
+              <label for="contraseña"></label>
+              <input class="input_login" name="password" type="password" placeholder="Ingresa tu contraseña " required>
+
+              <a href="" class="login_contra_up">
+                <h6 class="login_h_all">¿Olvidaste tu contraseña?</h6>
+              </a>
+              <div class="label_recordar">
+                <label for="Recuerdame" class="r">Recordame</label>
+                <input type="checkbox" name="recuerdame">
+              </div>
+            </article>
+            <article class="articulo_login_main">
+              <button class="btn_login_main" type="submit">INICIAR SESIÓN</button>
+              <a href="/users/register" class="btn_login_up">
+                <h6>¿No tenés cuenta? </h6> <h6 style="color: var(--color-celeste);">Crear cuenta</h6>
+              </a>
+            </article>
+          </section>
+        </form>
+      </main>
+
+      <!--ACA SE INCLUYE EL PARTIAL : -->
+      <%- include("../partials/footer.ejs") %>
+
+
+  </body>
+
+  </html>

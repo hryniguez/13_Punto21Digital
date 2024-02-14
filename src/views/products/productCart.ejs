@@ -1,0 +1,58 @@
+
+<!--ACA SE INCLUYE EL PARTIAL : HEAD -->
+<%- include("../partials/head.ejs") %>
+
+<body>
+
+    <header class="productCart-header">
+      <ul class="cart__header">
+        <a href="/"><img src="/images/logo.png" alt="" /></a>
+      </ul>
+      <img src="/images/compraSegura.png" alt="compra segura" />
+    </header>
+    <main class="productCart-main">
+
+      <div class="main__title__box">
+       
+        <h2 class="main__form__title">Carrito de Compra</h2>
+        
+      
+        <section class="productCart-main-section-principal">
+            <div class="productCart-main-section-principal-encabezado">
+                <h3 class="main__form__title">PRODUCTO</h3><h3 class="main__form__title">PRECIO</h3>
+            </div>
+            <article class="productCart-main-section-principal-article">
+                <div class="productCart-main-section-principal-article-div-1">
+                    <img src="/images/products/<%= product.imagen%>" alt="productos">
+                </div>
+                <div class="productCart-main-section-principal-article-div-2">
+                    <p id="productCart-article-nombre"><%= product.nombre%></p>
+                    <p id="productCart-article-precio">$<%= product.precio%></p>
+                    <a href="" id="productCart-article-borrar"><i class="fa-solid fa-trash-can"></i></a>
+                    <input type="number" name="cantidad" id="productCart-article-cantidad" value="1">
+                </div>
+            </article>
+            
+        </section>
+      <section class="productCart-main-section-secundario">
+        <p class="productCart-main-section-secundario-resumen">Resumen de compra</p>      
+        <div class="productCart-main-section-principal-article-div-1">
+          <img src="/images/products/<%= product.imagen%>" alt="productos">
+      </div>
+        <div class="productCart-main-section-secundario-div-1">
+        <p id="productCart-section-secundario-text-total">Total</p>
+        <p id="productCart-precio-total">$<%= product.precio%></p>
+      </div>
+      <div class="productCart-main-section-secundario-div-2">
+        <button id="button-pagar-productCart">PAGAR</button>
+        <a href="/"><button id="button-seguir-comprando-productCart">SEGUIR COMPRANDO</button></a>
+      </section>
+    </div>
+  </main>
+
+    <!--ACA SE INCLUYE EL PARTIAL : -->
+<%-include("../partials/footer.ejs")%>
+
+</body>
+
+</html>

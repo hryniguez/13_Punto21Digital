@@ -1,0 +1,58 @@
+<!--ACA SE INCLUYE EL PARTIAL : HEAD -->
+<%- include("../partials/head.ejs") %>
+
+<body>
+
+  <!--ACA SE INCLUYE EL PARTIAL : HEADER -->
+  <%- include("../partials/header.ejs") %>
+
+    <main >
+      <p><a class="redirect-detalle" href="/">Inicio</a> > <a class="redirect-detalle" href="/products"> <%= product.category %> </a>> Detalle > <%= product.nombre%></a>
+
+      <section class="productDetalle__container">
+
+          <article class="producto detalles_div_descripcion">
+
+          <img src="/images/products/<%= product.imagen%>" alt="imagen principal" class="imagen_grande">
+          <div class="detalles">
+            <h2><%= product.nombre%></h2>
+            <h2>$<%= product.precio %></h2>
+            <div class="select-options-details-products">
+            <div class="detalles_talles">
+              <p>Rango</p>
+              <select name="desde_hasta" id="" class="numero">
+                <% product.desde_hasta.forEach(desde_hasta => { %>
+                <option value=<%= desde_hasta %>><%= desde_hasta%></option>
+              <% }) %>
+              </select>
+            </div>
+            <div class="detalles_cantidad">
+              <p>Cantidad</p>
+              <input type="number" class="numero" value="1">
+            </div>
+
+            <a href="/products/carrito/<%= product.id%>">
+            </div>
+              <p class="main_carrito">COMPRAR</p>
+            </a>
+          </div>
+        </article>
+        <div class="detalles_div_descripcion">
+          <h3>Descripción</h3>
+          <p class="detalles_div_descripcion_p">
+            <%= product.descripcion %>
+          </p>
+        </div>
+
+
+      </section>
+
+    </main>
+
+<!--ACA SE INCLUYE EL PARTIAL : -->
+<%- include("../partials/footer.ejs") %>
+
+
+</body>
+
+</html>

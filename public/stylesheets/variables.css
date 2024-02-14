@@ -1,0 +1,18 @@
+:root{
+    --color-blanco: white;
+    --color-negro: #000000;
+    --gris-claro: #8C9197;
+
+    --fondo: #F5F5F5;
+    --color-celeste: #03C4EB;
+    --color-productos: #0088ec5e;  
+
+    --fuente: "Work Sans", sans-serif;
+
+    --parrafos: 12px;
+    --descripcion: 16px;
+    --precio: 18px;
+    --descuento: 16px;
+    --detalles: 10px;
+
+}

@@ -1,0 +1,125 @@
+.main__form {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    background-color: var(--color-blanco);
+    border: 2px solid black;
+    border-radius: 35px;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.main__form__title {
+    padding: 5% 0%;
+    letter-spacing: 8px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.main__form__lines {
+    display:none;
+    }
+
+.main__form__register {
+    display:flex;
+    flex-direction: column;
+    width:90%;
+    margin:auto;
+}
+
+.main__form__register input {
+    padding:15px;
+    border-radius: 10px; 
+    border:solid 1px #75798b;
+    margin: 10px 0px;
+}
+
+.main__form__register label {
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.main__form__register__password {
+    position:relative;
+    width:100%;
+    margin:auto;
+}
+
+.main__form__register__password input {
+    width:100%;
+}
+
+.main__form__register i {
+    color: #75798b;
+    position:absolute;
+    top:35%;
+    right: 2%;
+}
+
+.main__form__register__box {
+    text-align: center;
+
+}
+
+.main__form__button {
+    background-color: var(--color-negro);
+    box-shadow: 0px 0px 10px var(--color-negro);
+    color: var(--color-blanco);
+    padding:10px;
+    width:80%;
+    margin: 20px auto 5px;
+    border-radius:20px;  
+}
+
+.main__form__register p{
+    width:80%;
+    margin:auto;
+    font-size: 12px;
+    margin-bottom: 40px;
+    color:#75798b
+}
+
+.main__form__register a {
+    color:var(--color-blanco)
+}
+
+@media (min-width:768px) {
+    .main__form__lines {
+        display:flex;
+        width:25%;
+        border:black solid 1px;
+        margin:auto
+     }
+     .main__title__box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+     }
+
+     .main__form__title {
+        margin:auto
+     }
+
+    .main__form__register__box {
+        margin:3% 0% 10%;
+    }
+
+    .main__form__button {
+        width: 40%;
+    }
+    .main__form__register p {
+        width:40%;
+        margin:auto
+    }
+}
+
+@media (min-width:768px) {
+    .main__form__register {
+        max-width: 768px;
+    }
+}

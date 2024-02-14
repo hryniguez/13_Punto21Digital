@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "hryniguez",
+    "email": "hryniguez@gmail.com",
+    "password": "$2a$10$9wQCJpvmgNMt3sSu20Tuauv3rAZsy.3ap9HhiScGP.2a5O6ypeery",
+    "category": "ADMIN",
+    "date": "",
+    "localidad": "",
+    "sobremi": "",
+    "image": "1707056617347_img_.png"
+  },
+  {
+    "id": 1707244724683,
+    "name": "Thiago",
+    "email": "titan@gmail.com",
+    "password": "$2a$10$QJC8zo/JjReJDiusDT.AyefTFKmC/mqklA2auiVyUMOsqa6c4nOH.",
+    "category": "ADMIN",
+    "date": "",
+    "localidad": "",
+    "sobremi": "",
+    "image": "1707245860744_img_.jpg"
+  },
+  {
+    "id": 1707245907004,
+    "name": "invitado",
+    "email": "invitado@gmai.com",
+    "password": "$2a$10$0muziLC7I9NfDe4mUtqIcewyEw4rwev2T2wqdGZKyeVlv1G8Ak.sq",
+    "category": "USUARIO",
+    "date": "",
+    "localidad": "",
+    "sobremi": "",
+    "image": "1707245906990_img_.jpg"
+  },
+  {
+    "id": 1707248157095,
+    "name": "cami",
+    "email": "cami.yniguez@gmail.com",
+    "password": "$2a$10$H6ebm7CyjUoKJ.bvZmx2ku5TfOuRyfMWchgs5nIdVeFJUke5mzwh.",
+    "category": "USER",
+    "date": "",
+    "localidad": "",
+    "sobremi": "",
+    "image": "1707310939468_img_.jpg"
+  },
+  {
+    "id": 1707859009515,
+    "name": "hry",
+    "email": "hry@gmail.com",
+    "password": "$2a$10$whKI8pA.1fey5HKXqPDiIek1JzboVrtkmtZK31GXBAvxM9/eIQO1i",
+    "category": "ADMIN",
+    "date": "",
+    "localidad": "",
+    "sobremi": "",
+    "image": "1707859067933_img_.jpg"
+  }
+]
