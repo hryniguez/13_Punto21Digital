@@ -14,59 +14,7 @@
           Tu navegador no soporta el elemento de video.
         </video>
       </div>
-      <!-- <section class="carrusel_home">
-        <div id="carouselExample" class="carousel slide">
-          <div class="carousel-inner">
-            <div class="carousel-item active d-item">
-              <img
-                src="/images/digi1.jpg"
-                class="d-block w-100 d-img"
-                alt="digitalizacion"
-              />
-            </div>
-            <div class="carousel-item d-item">
-              <img
-                src="/images/digi2.jpg"
-                class="d-block w-100 d-img"
-                alt="digitalizacion"
-              />
-            </div>
-            <div class="carousel-item d-item">
-              <img
-                src="/images/digi3.jpg"
-                class="d-block w-100 d-img"
-                alt="digitalizacion"
-              />
-            </div>
-            <div class="carousel-item d-item">
-              <img
-                src="/images/digi4.jpg"
-                class="d-block w-100 d-img"
-                alt="digitalizacion"
-              />
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </section> -->
-
+      
       <div class="main_title_box">
         <hr class="hr_txt" />
         <h2 id="productos_home">DIGITALIZACIÓN ADF CONTINUOS</h2>
@@ -76,22 +24,25 @@
 
       <section class="contenedor-productos1 section_products_main_index">
         <% continuoProduct.forEach(product => { %>
-                  <article class="articulos">
-          <a href="../products/detalle/<%= product.id%>"><img src="/images/products/<%=product.imagen %>" alt="digitalizacion" /></a>
-          <div class="product-texto">
-            <div class="main_descuento_precio_articulo">
-              <p class="precio">$<%=product.precio%></p>
+            <article class="articulos">
+
+            <a href="../products/detalle/<%= product.id%>"><img src="/images/products/<%=product.imagen %>" alt="digitalizacion" /></a>
+            <div class="product-texto">
+              <p class="modelo"><%=product.nombre%></p>
+              <div class="main_descuento_precio_articulo">
+                <p class="precio">$<%=product.precio%></p>
+              </div>
+              <button><a class="button__blanco--color" href="/products/detalle/<%= product.id%>">Ver Detalle</a></button>
             </div>
-            <p class="modelo"><%=product.nombre%></p>
-            <button><a class="button__blanco--color" href="/products/detalle/<%= product.id%>">Ver Detalle</a></button>
-          </div>
         </article>
           <% }); %>
       </section>
 
       <div class="main_title_box">
         <hr class="hr_txt" />
+        <!-- <a href="#contactless"> -->
         <h2 id="productos_home">DIGITALIZACIÓN LIBROS SIN CONTACTO</h2>
+      <!-- </a> -->
         <hr class="hr_txt" />
       </div>
 
@@ -100,10 +51,10 @@
         <article class="articulos">
           <a href="/products/detalle/<%= product.id%>"><img src="/images/products/<%= product.imagen %>" alt="digitalizacion" /></a>
           <div class="product-texto">
+            <p class="modelo"><%=product.nombre%></p>
             <div class="main_descuento_precio_articulo">
               <p class="precio">$<%= product.precio%></p>
             </div>
-            <p class="modelo"><%=product.nombre%></p>
             <button><a class="button__blanco--color" href="/products/detalle/<%= product.id%>">Ver Detalle</a></button>
           </div>
         </article>
